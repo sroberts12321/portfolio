@@ -67,6 +67,7 @@ function App() {
   const PageTransition = ({ children }) => {
     return (
       <motion.div
+        classname="bg-background"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -131,8 +132,8 @@ function App() {
   ];
 
   return (
-    <PageTransition>
-      <div className="max-w-5xl mx-auto px-4 py-16">
+    <PageTransition className="bg-background">
+      <div className="max-w-5xl mx-auto px-4 py-16 bg-background">
         <div className="min-h-screen bg-gray-50">
           {/* Header/Nav */}
           <nav className="bg-white shadow-sm">
@@ -149,20 +150,20 @@ function App() {
           </nav>
 
           {/* Hero Section */}
-          <div className="bg-white">
+          <div className="bg-background">
             <div className="max-w-5xl mx-auto px-4 py-20">
               <div className="text-center">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-4xl font-bold text-text mb-4">
                   Full Stack Developer
                 </h2>
-                <p className="text-xl text-gray-600 mb-8">
+                <p className="text-xl text-text mb-8">
                   Building beautiful and functional web experiences
                 </p>
                 <div className="flex justify-center space-x-4">
-                  <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+                  <button className="bg-primary text-white px-6 py-2 rounded-md hover:bg-secondary">
                     View Projects
                   </button>
-                  <button href="./assets/Resume.pdf" className="border border-gray-300 px-6 py-2 rounded-md hover:bg-gray-50">
+                  <button href="./assets/Resume.pdf" className="bg-primary text-white border-text px-6 py-2 rounded-md hover:bg-secondary">
                     Download CV
                   </button>
                 </div>
@@ -176,9 +177,7 @@ function App() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">About Me</h2>
               <div className="bg-white rounded-lg shadow-sm p-8">
                 <p className="text-gray-600 leading-relaxed">
-                  I&lsquo;m a passionate full-stack developer with 5 years of experience building web and mobile applications.
-                  You can find me mostly sitting in front of a computer in Houston, TX.
-                  When I&lsquo;m not coding, I&lsquo;m probably thinking about coding.
+                  I&lsquo;m a full-stack developer with 5 years of experience building web and mobile applications. I&lsquo;ve been to 14 countries and plan to increase that number any chance I get. You can find me mostly sitting in front of a computer in Houston, TX.  
                 </p>
               </div>
             </div>
